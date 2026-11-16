@@ -31,3 +31,5 @@
   - [x] O rastreamento de cliques na planilha foi preservado e o Apps Script está documentado em `apps-script/Code.gs`.
 
 - [x] Adicionar imagens locais nas páginas de serviços, bairros, perguntas frequentes e política de privacidade, mantendo as imagens existentes na home e no sobre.
+
+- [x] Refazer a composição visual das páginas internas para usar a imagem no mesmo padrão e local da home: hero de primeira dobra com foto em background, overlay, título e CTA sobre a imagem.
