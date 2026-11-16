@@ -1,7 +1,7 @@
 import './styles.css';
 
 const WHATSAPP_NUMBER = '5516900000000';
-const HERO_IMAGE = '/manus-storage/async-images/BRZp2FZzrKelu7OTgc5U6D/image-1.webp';
+const HERO_IMAGE = '/assets/hero-retirada-moveis.webp';
 
 const iconPaths = {
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',

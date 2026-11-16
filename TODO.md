@@ -23,3 +23,4 @@
   - [x] Adicionar title, description, keywords, canonical, Open Graph, Twitter Card e sinais de localidade.
   - [x] Adicionar dados estruturados JSON-LD para negócio local, serviço e perguntas frequentes.
   - [x] Criar `sitemap.xml`, `robots.txt`, `llms.txt` e `llms-full.txt` com o domínio público atual.
+- [x] Corrigir as imagens para publicação na Vercel, copiando hero e foto de benefícios para `public/assets` e removendo referências a `/manus-storage`.
