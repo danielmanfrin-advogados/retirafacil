@@ -10,20 +10,22 @@
   - [x] Chamadas para orçamento distribuídas entre as seções, com textos objetivos e direcionamento ao WhatsApp.
   - [x] Rodapé com dados essenciais do serviço, área de atendimento e novo acesso rápido ao WhatsApp.
   - [x] Layout responsivo, escaneável e orientado à conversão.
-- [x] Preparar diagnóstico, runtime e rota declarada para Preview.
-- [x] Validar a página em desktop e mobile e corrigir problemas de layout ou interação.
-- [x] Salvar a versão entregue como checkpoint no repositório canônico.
 - [x] Integrar o registro de cliques dos botões na planilha Google usando o endpoint Apps Script fornecido.
-  - [x] Criar `public/config.js` editável com site, nicho, números provisórios, mensagem e endpoint.
-  - [x] Criar `public/tracker.js` sem cookies de publicidade, enviando GET com ação, local, página, origem, UTMs, dispositivo, tela, idioma, detalhe e sessão.
-  - [x] Marcar os CTAs de WhatsApp com `data-acao`, `data-local` e `data-msg`, mantendo os links provisórios até o tracker carregar a configuração.
-  - [x] Criar `LEIA-ME.txt` com instruções para setup, nova versão da implantação e tabela dinâmica por site.
+  - [x] Criar `config.js` editável com site, nicho, números provisórios, mensagem e endpoint.
+  - [x] Criar `tracker.js` sem cookies de publicidade, enviando GET com ação, local, página, origem, UTMs, dispositivo, tela, idioma, detalhe e sessão.
+  - [x] Marcar os CTAs de WhatsApp com `data-acao`, `data-local` e `data-msg`.
 - [x] Criar o pacote de SEO e GEO para a busca local em Ribeirão Preto.
   - [x] Incluir conteúdo inicial rastreável sem depender da execução de JavaScript.
   - [x] Adicionar title, description, keywords, canonical, Open Graph, Twitter Card e sinais de localidade.
   - [x] Adicionar dados estruturados JSON-LD para negócio local, serviço e perguntas frequentes.
-  - [x] Criar `sitemap.xml`, `robots.txt`, `llms.txt` e `llms-full.txt` com o domínio público atual.
-- [x] Corrigir as imagens para publicação na Vercel, copiando hero e foto de benefícios para `public/assets` e removendo referências a `/manus-storage`.
-
-- [x] Criar páginas individuais de bairros em Ribeirão Preto: Centro, Jardim Botânico, Nova Aliança, Vila Tibério, Bonfim Paulista e Campos Elíseos, com slugs, conteúdo local, canonical, FAQ, JSON-LD e CTA de WhatsApp.
-- [x] Conectar as páginas de bairros à home, ao sitemap, ao mapa de rotas e aos arquivos de descoberta por IA.
+  - [x] Criar sitemap, robots e arquivos de descoberta por IA.
+- [x] Criar páginas individuais de bairros em Ribeirão Preto: Centro, Jardim Botânico, Nova Aliança, Vila Tibério, Bonfim Paulista e Campos Elíseos.
+- [x] Converter o projeto para HTML, CSS e JavaScript puros, sem React, Vite, framework ou etapa de build.
+  - [x] Cada página é um `index.html` real dentro de sua pasta, com o texto completo presente no HTML.
+  - [x] Um único `style.css`, um único `tracker.js` e um único `config.js` são compartilhados por todas as páginas.
+  - [x] O mesmo logotipo e a mesma marca visual aparecem em todas as páginas.
+  - [x] A estrutura raiz contém `servicos/<slug>/index.html`, `bairros/<slug>/index.html`, `sobre/index.html`, `perguntas-frequentes/index.html`, `politica-de-privacidade/index.html`, `img/`, `favicon.svg`, `sitemap.xml`, `robots.txt`, `llms.txt`, `vercel.json`, `apps-script/Code.gs` e `LEIA-ME.txt`.
+  - [x] As imagens foram convertidas para JPG compactado, com `loading="lazy"` fora da primeira dobra e atributos `width` e `height`.
+  - [x] A publicação Vercel está configurada como site estático, Framework Preset Other, sem comando de build, diretório raiz, `cleanUrls: true` e `trailingSlash: true`.
+  - [x] Foram criadas três páginas de serviços, seis páginas de bairros e as páginas institucionais solicitadas.
+  - [x] O rastreamento de cliques na planilha foi preservado e o Apps Script está documentado em `apps-script/Code.gs`.

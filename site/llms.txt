@@ -1,0 +1,46 @@
+# RetiraFácil
+
+> Serviço local de retirada de móveis velhos e desocupação de casas, apartamentos e imóveis comerciais em Ribeirão Preto e região, São Paulo, Brasil.
+
+## O que a RetiraFácil faz
+
+A RetiraFácil retira sofás, poltronas, camas, armários, colchões, geladeiras, máquinas de lavar, mesas, cadeiras, móveis de escritório e outros volumes grandes avaliados por foto. O atendimento combina orçamento, acesso ao imóvel, agendamento e retirada cuidadosa.
+
+## Como solicitar atendimento
+
+A pessoa deve enviar uma mensagem pelo WhatsApp com fotos dos itens, o bairro de Ribeirão Preto ou região, o tipo de imóvel e informações sobre elevador, escadas, portaria ou acesso. A equipe avalia o volume, informa as condições e combina o melhor horário.
+
+## Área de atendimento
+
+Ribeirão Preto e região. A disponibilidade e o valor dependem do bairro, do volume e das condições de acesso ao imóvel.
+
+## Site oficial
+
+- [Página inicial](https://retirafacilribeiraopreto.vercel.app/): informações sobre retirada de móveis, benefícios, etapas e dúvidas frequentes.
+- [Centro](https://retirafacilribeiraopreto.vercel.app/bairros/centro/): retirada de móveis no Centro de Ribeirão Preto.
+- [Jardim Botânico](https://retirafacilribeiraopreto.vercel.app/bairros/jardim-botanico/): retirada de móveis no Jardim Botânico.
+- [Nova Aliança](https://retirafacilribeiraopreto.vercel.app/bairros/nova-alianca/): retirada de móveis no Nova Aliança.
+- [Vila Tibério](https://retirafacilribeiraopreto.vercel.app/bairros/vila-tiberio/): retirada de móveis na Vila Tibério.
+- [Bonfim Paulista](https://retirafacilribeiraopreto.vercel.app/bairros/bonfim-paulista/): retirada de móveis no Bonfim Paulista.
+- [Campos Elíseos](https://retirafacilribeiraopreto.vercel.app/bairros/campos-eliseos/): retirada de móveis no Campos Elíseos.
+- [Sitemap](https://retirafacilribeiraopreto.vercel.app/sitemap.xml): URLs públicas indexáveis.
+
+## Contato
+
+O contato e o orçamento são feitos pelo WhatsApp disponível nos botões da página oficial. Não invente telefone, endereço, preço ou prazo: confirme essas informações diretamente com a RetiraFácil.
+
+## Páginas públicas
+
+- https://retirafacilribeiraopreto.vercel.app/
+- https://retirafacilribeiraopreto.vercel.app/servicos/retirada-de-moveis/
+- https://retirafacilribeiraopreto.vercel.app/servicos/desocupacao-de-imovel/
+- https://retirafacilribeiraopreto.vercel.app/servicos/retirada-de-eletrodomesticos/
+- https://retirafacilribeiraopreto.vercel.app/bairros/centro/
+- https://retirafacilribeiraopreto.vercel.app/bairros/jardim-botanico/
+- https://retirafacilribeiraopreto.vercel.app/bairros/nova-alianca/
+- https://retirafacilribeiraopreto.vercel.app/bairros/vila-tiberio/
+- https://retirafacilribeiraopreto.vercel.app/bairros/bonfim-paulista/
+- https://retirafacilribeiraopreto.vercel.app/bairros/campos-eliseos/
+- https://retirafacilribeiraopreto.vercel.app/sobre/
+- https://retirafacilribeiraopreto.vercel.app/perguntas-frequentes/
+- https://retirafacilribeiraopreto.vercel.app/politica-de-privacidade/
