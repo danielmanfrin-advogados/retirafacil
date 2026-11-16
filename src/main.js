@@ -50,6 +50,15 @@ const items = [
   { icon: 'leaf', name: 'Outros volumes', note: 'Avaliamos pelo WhatsApp' }
 ];
 
+const neighborhoods = [
+  { slug: 'centro', name: 'Centro', note: 'Apartamentos, casas e imóveis comerciais' },
+  { slug: 'jardim-botanico', name: 'Jardim Botânico', note: 'Casas e condomínios em transição' },
+  { slug: 'nova-alianca', name: 'Nova Aliança', note: 'Mudanças e desocupação de apartamentos' },
+  { slug: 'vila-tiberio', name: 'Vila Tibério', note: 'Móveis grandes e eletros volumosos' },
+  { slug: 'bonfim-paulista', name: 'Bonfim Paulista', note: 'Casas, condomínios e outros volumes' },
+  { slug: 'campos-eliseos', name: 'Campos Elíseos', note: 'Casas, salas e imóveis em reforma' }
+];
+
 const steps = [
   { number: '01', icon: 'message', title: 'Mande uma mensagem', copy: 'Conte o que precisa retirar, mande fotos e informe o bairro do imóvel.' },
   { number: '02', icon: 'calendar', title: 'Receba seu orçamento', copy: 'Avaliamos o volume, o acesso e combinamos um valor sem enrolação.' },
@@ -77,6 +86,7 @@ function render() {
           <nav class="desktop-nav" aria-label="Navegação principal">
             <a href="#servicos">O que retiramos</a>
             <a href="#como-funciona">Como funciona</a>
+            <a href="#bairros">Bairros</a>
             <a href="#duvidas">Dúvidas</a>
           </nav>
           <a class="button button-small button-outline" ${whatsappAttrs('topo')} target="_blank" rel="noreferrer">${icon('message')} Pedir orçamento</a>
@@ -85,6 +95,7 @@ function render() {
         <div class="mobile-menu" data-mobile-menu>
           <a href="#servicos">O que retiramos</a>
           <a href="#como-funciona">Como funciona</a>
+          <a href="#bairros">Bairros</a>
           <a href="#duvidas">Dúvidas</a>
           <a class="button button-primary" ${whatsappAttrs('topo')} target="_blank" rel="noreferrer">${icon('message')} Pedir orçamento</a>
         </div>
@@ -136,6 +147,11 @@ function render() {
             <div class="benefit-photo"><div class="photo-label">RETIRAFÁCIL <span>///</span></div><div class="photo-stamp">feito<br><strong>com<br>cuidado</strong></div></div>
             <div class="benefit-content"><div class="section-eyebrow">Mais espaço. Menos estresse. <span></span></div><h2>Sua casa livre de tralha, sem você precisar resolver tudo sozinho.</h2><p>Retirar móveis grandes exige tempo, força e logística. Nós entramos para tornar essa parte simples — do primeiro contato até o último item fora do caminho.</p><div class="benefit-list"><div><span class="check-circle">${icon('check')}</span><div><strong>Desocupação rápida</strong><p>Para entregar, vender, alugar ou reorganizar o imóvel.</p></div></div><div><span class="check-circle">${icon('check')}</span><div><strong>Equipe cuidadosa</strong><p>Protegemos paredes, elevadores e áreas comuns durante a retirada.</p></div></div><div><span class="check-circle">${icon('check')}</span><div><strong>Combinado é combinado</strong><p>Você recebe o orçamento e confirma tudo antes do agendamento.</p></div></div></div></div>
           </div>
+        </section>
+
+        <section class="section neighborhoods-section" id="bairros">
+          <div class="container neighborhoods-heading"><div><div class="section-eyebrow">Atendimento local <span></span></div><h2>Também atendemos <em>seu bairro.</em></h2></div><p>Escolha uma região de Ribeirão Preto para ver informações úteis e pedir um orçamento de retirada de móveis.</p></div>
+          <div class="container neighborhood-grid">${neighborhoods.map((neighborhood, index) => `<a class="neighborhood-card" href="/bairros/${neighborhood.slug}/"><span class="neighborhood-index">0${index + 1}</span><strong>${neighborhood.name}</strong><small>${neighborhood.note}</small><span class="neighborhood-arrow">${icon('arrow')}</span></a>`).join('')}</div>
         </section>
 
         <section class="section process-section" id="como-funciona">

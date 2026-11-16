@@ -17,6 +17,12 @@ Ribeirão Preto e região. A disponibilidade e o valor dependem do bairro, do vo
 ## Site oficial
 
 - [Página inicial](https://retirafacilribeiraopreto.vercel.app/): informações sobre retirada de móveis, benefícios, etapas e dúvidas frequentes.
+- [Centro](https://retirafacilribeiraopreto.vercel.app/bairros/centro/): retirada de móveis no Centro de Ribeirão Preto.
+- [Jardim Botânico](https://retirafacilribeiraopreto.vercel.app/bairros/jardim-botanico/): retirada de móveis no Jardim Botânico.
+- [Nova Aliança](https://retirafacilribeiraopreto.vercel.app/bairros/nova-alianca/): retirada de móveis no Nova Aliança.
+- [Vila Tibério](https://retirafacilribeiraopreto.vercel.app/bairros/vila-tiberio/): retirada de móveis na Vila Tibério.
+- [Bonfim Paulista](https://retirafacilribeiraopreto.vercel.app/bairros/bonfim-paulista/): retirada de móveis no Bonfim Paulista.
+- [Campos Elíseos](https://retirafacilribeiraopreto.vercel.app/bairros/campos-eliseos/): retirada de móveis no Campos Elíseos.
 - [Sitemap](https://retirafacilribeiraopreto.vercel.app/sitemap.xml): URLs públicas indexáveis.
 
 ## Contato

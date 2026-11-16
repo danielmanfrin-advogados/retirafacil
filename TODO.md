@@ -24,3 +24,6 @@
   - [x] Adicionar dados estruturados JSON-LD para negócio local, serviço e perguntas frequentes.
   - [x] Criar `sitemap.xml`, `robots.txt`, `llms.txt` e `llms-full.txt` com o domínio público atual.
 - [x] Corrigir as imagens para publicação na Vercel, copiando hero e foto de benefícios para `public/assets` e removendo referências a `/manus-storage`.
+
+- [x] Criar páginas individuais de bairros em Ribeirão Preto: Centro, Jardim Botânico, Nova Aliança, Vila Tibério, Bonfim Paulista e Campos Elíseos, com slugs, conteúdo local, canonical, FAQ, JSON-LD e CTA de WhatsApp.
+- [x] Conectar as páginas de bairros à home, ao sitemap, ao mapa de rotas e aos arquivos de descoberta por IA.

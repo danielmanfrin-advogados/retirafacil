@@ -7,6 +7,8 @@ Nicho: retirada de móveis velhos e desocupação de imóveis
 Localidade: Ribeirão Preto e região, São Paulo, Brasil
 URL oficial: https://retirafacilribeiraopreto.vercel.app/
 
+Páginas locais: /bairros/centro/, /bairros/jardim-botanico/, /bairros/nova-alianca/, /bairros/vila-tiberio/, /bairros/bonfim-paulista/ e /bairros/campos-eliseos/.
+
 ## Resumo confiável
 
 A RetiraFácil é um serviço local para quem precisa liberar espaço em uma casa, apartamento, condomínio ou imóvel comercial. O serviço retira itens grandes e pesados com cuidado e organiza o atendimento por orçamento e agendamento via WhatsApp.
