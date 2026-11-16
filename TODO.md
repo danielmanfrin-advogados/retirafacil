@@ -29,3 +29,5 @@
   - [x] A publicação Vercel está configurada como site estático, Framework Preset Other, sem comando de build, diretório raiz, `cleanUrls: true` e `trailingSlash: true`.
   - [x] Foram criadas três páginas de serviços, seis páginas de bairros e as páginas institucionais solicitadas.
   - [x] O rastreamento de cliques na planilha foi preservado e o Apps Script está documentado em `apps-script/Code.gs`.
+
+- [x] Adicionar imagens locais nas páginas de serviços, bairros, perguntas frequentes e política de privacidade, mantendo as imagens existentes na home e no sobre.
