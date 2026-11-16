@@ -18,3 +18,8 @@
   - [x] Criar `public/tracker.js` sem cookies de publicidade, enviando GET com ação, local, página, origem, UTMs, dispositivo, tela, idioma, detalhe e sessão.
   - [x] Marcar os CTAs de WhatsApp com `data-acao`, `data-local` e `data-msg`, mantendo os links provisórios até o tracker carregar a configuração.
   - [x] Criar `LEIA-ME.txt` com instruções para setup, nova versão da implantação e tabela dinâmica por site.
+- [x] Criar o pacote de SEO e GEO para a busca local em Ribeirão Preto.
+  - [x] Incluir conteúdo inicial rastreável sem depender da execução de JavaScript.
+  - [x] Adicionar title, description, keywords, canonical, Open Graph, Twitter Card e sinais de localidade.
+  - [x] Adicionar dados estruturados JSON-LD para negócio local, serviço e perguntas frequentes.
+  - [x] Criar `sitemap.xml`, `robots.txt`, `llms.txt` e `llms-full.txt` com o domínio público atual.
