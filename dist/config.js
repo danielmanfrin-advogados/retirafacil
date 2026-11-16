@@ -4,7 +4,7 @@
  */
 window.SITE_CONFIG = {
   site: 'retirafacil',
-  url: 'https://retirafacil.vercel.app',
+  url: 'https://retirafacilribeiraopreto.vercel.app/',
   nicho: 'retirada de móveis velhos',
   // Troque estes dois números pelos números reais, usando somente dígitos:
   // 55 + DDD + número. Exemplo: 5516999999999
