@@ -1,0 +1,24 @@
+GUIA SIMPLES — REGISTRO DE CLIQUES DOS SITES
+
+O site envia os cliques dos botões para uma única planilha Google. Não são coletados nome, e-mail, CPF ou outros dados pessoais. Também não são usados cookies de publicidade.
+
+1. Abra a planilha que receberá os registros.
+2. No menu, clique em Extensões > Apps Script.
+3. Apague o código que estiver aberto e cole o conteúdo do arquivo Code.gs.
+4. Execute a função setup() uma vez. Ela cria o cabeçalho da aba Cliques e a aba Resumo.
+5. Se já existirem linhas antigas desalinhadas, execute migrarLinhasAntigas() uma vez.
+6. Clique em Implantar > Gerenciar implantações.
+7. Na implantação existente, clique no lápis para editar.
+8. Em Versão, escolha Nova versão e clique em Implantar. Assim a URL /exec continua a mesma.
+9. Confirme que o acesso está como Qualquer pessoa.
+10. Abra a URL /exec no navegador. O resultado esperado é “ok v2”. Se aparecer somente “ok”, a versão antiga ainda está publicada.
+
+COMO TROCAR O NÚMERO DO WHATSAPP
+
+No projeto do site, abra public/config.js. Troque os valores whatsapp e telefone pelos números reais usando somente dígitos, com 55 + DDD + número. Não é necessário editar os links dos botões: o tracker.js atualiza os links automaticamente quando o site carrega.
+
+COMO LER OS CLIQUES POR SITE
+
+Para montar um relatório simples, abra a aba Cliques e escolha Inserir > Tabela dinâmica. Na configuração da tabela, coloque Site em Linhas e faça a contagem de Ação em Valores. Assim uma única planilha mostra quantos cliques cada site gerou.
+
+O arquivo public/config.js identifica este site como “retirafacil” e usa o nicho “retirada de móveis velhos”. Para duplicar o rastreador em outro site, copie config.js e tracker.js e altere pelo menos site, nicho e os números do atendimento.

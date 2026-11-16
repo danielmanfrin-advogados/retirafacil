@@ -1,6 +1,6 @@
 import './styles.css';
 
-const WHATSAPP_NUMBER = '5516999999999';
+const WHATSAPP_NUMBER = '5516900000000';
 const HERO_IMAGE = '/manus-storage/async-images/BRZp2FZzrKelu7OTgc5U6D/image-1.webp';
 
 const iconPaths = {
@@ -30,6 +30,15 @@ function icon(name, className = '') {
 function whatsappLink(context = 'orçamento para retirada de móveis') {
   const text = `Olá! Vim pelo site da RetiraFácil e gostaria de solicitar um ${context}.`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
+function escapeAttribute(value) {
+  return value.replace(/&/g, '&amp;').replace(/\"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function whatsappAttrs(local, context = 'orçamento para retirada de móveis') {
+  const text = `Olá! Vim pelo site da RetiraFácil e gostaria de solicitar um ${context}.`;
+  return `href="${whatsappLink(context)}" data-acao="whatsapp" data-local="${local}" data-msg="${escapeAttribute(text)}"`;
 }
 
 const items = [
@@ -70,14 +79,14 @@ function render() {
             <a href="#como-funciona">Como funciona</a>
             <a href="#duvidas">Dúvidas</a>
           </nav>
-          <a class="button button-small button-outline" href="${whatsappLink()}" target="_blank" rel="noreferrer">${icon('message')} Pedir orçamento</a>
+          <a class="button button-small button-outline" ${whatsappAttrs('topo')} target="_blank" rel="noreferrer">${icon('message')} Pedir orçamento</a>
           <button class="mobile-menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>${icon('menu')}</button>
         </div>
         <div class="mobile-menu" data-mobile-menu>
           <a href="#servicos">O que retiramos</a>
           <a href="#como-funciona">Como funciona</a>
           <a href="#duvidas">Dúvidas</a>
-          <a class="button button-primary" href="${whatsappLink()}" target="_blank" rel="noreferrer">${icon('message')} Pedir orçamento</a>
+          <a class="button button-primary" ${whatsappAttrs('topo')} target="_blank" rel="noreferrer">${icon('message')} Pedir orçamento</a>
         </div>
       </header>
 
@@ -90,7 +99,7 @@ function render() {
             <h1>Desocupe seu imóvel <em>sem carregar peso.</em></h1>
             <p class="hero-lead">A RetiraFácil remove móveis velhos e itens volumosos de casas e apartamentos com agilidade, cuidado e orçamento direto pelo WhatsApp.</p>
             <div class="hero-actions">
-              <a class="button button-accent" href="${whatsappLink('orçamento para desocupar meu imóvel')}" target="_blank" rel="noreferrer">Solicitar orçamento ${icon('arrow')}</a>
+              <a class="button button-accent" ${whatsappAttrs('hero', 'orçamento para desocupar meu imóvel')} target="_blank" rel="noreferrer">Solicitar orçamento ${icon('arrow')}</a>
               <a class="text-link light-link" href="#servicos">Ver o que retiramos ${icon('down')}</a>
             </div>
             <div class="hero-proof">
@@ -115,7 +124,7 @@ function render() {
         <section class="section section-intro" id="servicos">
           <div class="container split-intro">
             <div class="section-eyebrow">O que retiramos <span></span></div>
-            <div class="intro-copy"><h2>De um móvel pesado a um imóvel inteiro.</h2><p>Não importa se você está mudando, reformando, vendendo ou simplesmente cansou de ver aquele volume ocupando espaço. A gente organiza a retirada para você respirar aliviado.</p><a class="text-link dark-link" href="${whatsappLink('avaliação dos itens que preciso retirar')}" target="_blank" rel="noreferrer">Falar sobre meus itens ${icon('arrow')}</a></div>
+            <div class="intro-copy"><h2>De um móvel pesado a um imóvel inteiro.</h2><p>Não importa se você está mudando, reformando, vendendo ou simplesmente cansou de ver aquele volume ocupando espaço. A gente organiza a retirada para você respirar aliviado.</p><a class="text-link dark-link" ${whatsappAttrs('sobre', 'avaliação dos itens que preciso retirar')} target="_blank" rel="noreferrer">Falar sobre meus itens ${icon('arrow')}</a></div>
           </div>
           <div class="container item-grid">
             ${items.map((item, index) => `<article class="item-card ${index === 0 ? 'item-card-featured' : ''}"><div class="item-icon">${icon(item.icon)}</div><div><h3>${item.name}</h3><p>${item.note}</p></div><span class="card-arrow">${icon('arrow')}</span></article>`).join('')}
@@ -130,7 +139,7 @@ function render() {
         </section>
 
         <section class="section process-section" id="como-funciona">
-          <div class="container"><div class="process-heading"><div><div class="section-eyebrow">Um pedido simples <span></span></div><h2>Você mostra.<br><em>A gente resolve.</em></h2></div><p>Sem formulário longo e sem espera. Mande uma mensagem com fotos e diga onde fica o imóvel. A equipe retorna com os próximos passos.</p></div><div class="steps-grid">${steps.map(step => `<article class="step-card"><div class="step-top"><span class="step-number">${step.number}</span><span class="step-icon">${icon(step.icon)}</span></div><h3>${step.title}</h3><p>${step.copy}</p></article>`).join('')}</div><div class="process-cta"><span>Pronto para abrir espaço?</span><a class="button button-dark" href="${whatsappLink()}" target="_blank" rel="noreferrer">Chamar no WhatsApp ${icon('arrow')}</a></div></div>
+          <div class="container"><div class="process-heading"><div><div class="section-eyebrow">Um pedido simples <span></span></div><h2>Você mostra.<br><em>A gente resolve.</em></h2></div><p>Sem formulário longo e sem espera. Mande uma mensagem com fotos e diga onde fica o imóvel. A equipe retorna com os próximos passos.</p></div><div class="steps-grid">${steps.map(step => `<article class="step-card"><div class="step-top"><span class="step-number">${step.number}</span><span class="step-icon">${icon(step.icon)}</span></div><h3>${step.title}</h3><p>${step.copy}</p></article>`).join('')}</div><div class="process-cta"><span>Pronto para abrir espaço?</span><a class="button button-dark" ${whatsappAttrs('servico')} target="_blank" rel="noreferrer">Chamar no WhatsApp ${icon('arrow')}</a></div></div>
         </section>
 
         <section class="section quote-section">
@@ -138,15 +147,15 @@ function render() {
         </section>
 
         <section class="section faq-section" id="duvidas">
-          <div class="container faq-layout"><div class="faq-intro"><div class="section-eyebrow">Antes de chamar <span></span></div><h2>Dúvidas comuns, respostas diretas.</h2><p>Se a sua dúvida não estiver aqui, mande uma mensagem. Cada imóvel tem uma história — e a gente olha para os detalhes.</p><a class="text-link dark-link" href="${whatsappLink('uma dúvida sobre a retirada')}" target="_blank" rel="noreferrer">Tirar uma dúvida no WhatsApp ${icon('arrow')}</a></div><div class="faq-list">${faqs.map((faq, index) => `<details class="faq-item" ${index === 0 ? 'open' : ''}><summary><span>${faq[0]}</span>${icon('chevron')}</summary><p>${faq[1]}</p></details>`).join('')}</div></div>
+          <div class="container faq-layout"><div class="faq-intro"><div class="section-eyebrow">Antes de chamar <span></span></div><h2>Dúvidas comuns, respostas diretas.</h2><p>Se a sua dúvida não estiver aqui, mande uma mensagem. Cada imóvel tem uma história — e a gente olha para os detalhes.</p><a class="text-link dark-link" ${whatsappAttrs('final', 'uma dúvida sobre a retirada')} target="_blank" rel="noreferrer">Tirar uma dúvida no WhatsApp ${icon('arrow')}</a></div><div class="faq-list">${faqs.map((faq, index) => `<details class="faq-item" ${index === 0 ? 'open' : ''}><summary><span>${faq[0]}</span>${icon('chevron')}</summary><p>${faq[1]}</p></details>`).join('')}</div></div>
         </section>
 
-        <section class="final-cta"><div class="container final-cta-inner"><div class="section-eyebrow light-eyebrow">Próximo passo <span></span></div><h2>O espaço que você quer<br><em>começa por uma mensagem.</em></h2><p>Conte o que precisa sair. A RetiraFácil ajuda você a desocupar com mais leveza.</p><a class="button button-accent" href="${whatsappLink('orçamento para retirada de móveis')}" target="_blank" rel="noreferrer">Pedir orçamento pelo WhatsApp ${icon('arrow')}</a></div><div class="cta-orbit orbit-one"></div><div class="cta-orbit orbit-two"></div></section>
+        <section class="final-cta"><div class="container final-cta-inner"><div class="section-eyebrow light-eyebrow">Próximo passo <span></span></div><h2>O espaço que você quer<br><em>começa por uma mensagem.</em></h2><p>Conte o que precisa sair. A RetiraFácil ajuda você a desocupar com mais leveza.</p><a class="button button-accent" ${whatsappAttrs('final', 'orçamento para retirada de móveis')} target="_blank" rel="noreferrer">Pedir orçamento pelo WhatsApp ${icon('arrow')}</a></div><div class="cta-orbit orbit-one"></div><div class="cta-orbit orbit-two"></div></section>
       </main>
 
-      <footer class="footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="#top"><span class="brand-mark">${icon('arrowUp')}</span><span class="brand-copy"><strong>Retira<span>Fácil</span></strong><small>móveis e desocupação</small></span></a><p class="footer-note">Retirada de móveis velhos para casas, apartamentos e imóveis que precisam respirar de novo.</p></div><div><h3>Navegue</h3><a href="#servicos">O que retiramos</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas frequentes</a></div><div><h3>Fale com a gente</h3><p>Atendimento pelo WhatsApp<br>para orçamento e agendamento.</p><a class="footer-whatsapp" href="${whatsappLink()}" target="_blank" rel="noreferrer">${icon('message')} Iniciar conversa</a></div></div><div class="container footer-bottom"><span>© 2026 RetiraFácil</span><span>Feito para deixar a vida mais leve.</span></div></footer>
-      <a class="floating-whatsapp" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Pedir orçamento pelo WhatsApp">${icon('message')}<span>Orçamento rápido</span></a>
-      <div class="mobile-cta"><a href="${whatsappLink()}" target="_blank" rel="noreferrer">${icon('message')} Pedir orçamento no WhatsApp</a></div>
+      <footer class="footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="#top"><span class="brand-mark">${icon('arrowUp')}</span><span class="brand-copy"><strong>Retira<span>Fácil</span></strong><small>móveis e desocupação</small></span></a><p class="footer-note">Retirada de móveis velhos para casas, apartamentos e imóveis que precisam respirar de novo.</p></div><div><h3>Navegue</h3><a href="#servicos">O que retiramos</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas frequentes</a></div><div><h3>Fale com a gente</h3><p>Atendimento pelo WhatsApp<br>para orçamento e agendamento.</p><a class="footer-whatsapp" ${whatsappAttrs('final')} target="_blank" rel="noreferrer">${icon('message')} Iniciar conversa</a></div></div><div class="container footer-bottom"><span>© 2026 RetiraFácil</span><span>Feito para deixar a vida mais leve.</span></div></footer>
+      <a class="floating-whatsapp" ${whatsappAttrs('barra-fixa')} target="_blank" rel="noreferrer" aria-label="Pedir orçamento pelo WhatsApp">${icon('message')}<span>Orçamento rápido</span></a>
+      <div class="mobile-cta"><a ${whatsappAttrs('barra-fixa')} target="_blank" rel="noreferrer">${icon('message')} Pedir orçamento no WhatsApp</a></div>
     </div>
   `;
 
