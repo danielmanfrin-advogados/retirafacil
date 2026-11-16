@@ -12,4 +12,4 @@
   - [x] Layout responsivo, escaneável e orientado à conversão.
 - [x] Preparar diagnóstico, runtime e rota declarada para Preview.
 - [x] Validar a página em desktop e mobile e corrigir problemas de layout ou interação.
-- [ ] Salvar a versão entregue como checkpoint no repositório canônico.
+- [x] Salvar a versão entregue como checkpoint no repositório canônico.
